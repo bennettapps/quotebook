@@ -1,5 +1,5 @@
 class HomiesController < ApplicationController
-  before_action :set_homy, only: %i[ show edit update destroy ]
+  before_action :set_homie, only: %i[ show edit update destroy ]
 
   # GET /homies or /homies.json
   def index
@@ -12,7 +12,7 @@ class HomiesController < ApplicationController
 
   # GET /homies/new
   def new
-    @homy = Homie.new
+    @homie = Homie.new
   end
 
   # GET /homies/1/edit
@@ -21,15 +21,15 @@ class HomiesController < ApplicationController
 
   # POST /homies or /homies.json
   def create
-    @homy = Homie.new(homy_params)
+    @homie = Homie.new(homie_params)
 
     respond_to do |format|
-      if @homy.save
-        format.html { redirect_to homy_url(@homy), notice: "Homie was successfully created." }
-        format.json { render :show, status: :created, location: @homy }
+      if @homie.save
+        format.html { redirect_to homie_url(@homie), notice: "Homie was successfully created." }
+        format.json { render :show, status: :created, location: @homie }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @homy.errors, status: :unprocessable_entity }
+        format.json { render json: @homie.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -37,19 +37,19 @@ class HomiesController < ApplicationController
   # PATCH/PUT /homies/1 or /homies/1.json
   def update
     respond_to do |format|
-      if @homy.update(homy_params)
-        format.html { redirect_to homy_url(@homy), notice: "Homie was successfully updated." }
-        format.json { render :show, status: :ok, location: @homy }
+      if @homie.update(homie_params)
+        format.html { redirect_to homie_url(@homie), notice: "Homie was successfully updated." }
+        format.json { render :show, status: :ok, location: @homie }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @homy.errors, status: :unprocessable_entity }
+        format.json { render json: @homie.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /homies/1 or /homies/1.json
   def destroy
-    @homy.destroy!
+    @homie.destroy!
 
     respond_to do |format|
       format.html { redirect_to homies_url, notice: "Homie was successfully destroyed." }
@@ -59,12 +59,12 @@ class HomiesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_homy
-      @homy = Homie.find(params[:id])
+    def set_homie
+      @homie = Homie.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
-    def homy_params
-      params.require(:homy).permit(:name)
+    def homie_params
+      params.require(:homie).permit(:name)
     end
 end

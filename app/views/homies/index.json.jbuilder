@@ -1,1 +1,1 @@
-json.array! @homies, partial: "homies/homy", as: :homy
+json.array! @homies, partial: "homies/homie", as: :homie

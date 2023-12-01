@@ -2,7 +2,7 @@ require "test_helper"
 
 class HomiesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @homy = homies(:one)
+    @homie = homies(:one)
   end
 
   test "should get index" do
@@ -11,36 +11,36 @@ class HomiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_homy_url
+    get new_homie_url
     assert_response :success
   end
 
-  test "should create homy" do
+  test "should create homie" do
     assert_difference("Homie.count") do
-      post homies_url, params: { homy: { name: @homy.name } }
+      post homies_url, params: { homie: { name: @homie.name } }
     end
 
-    assert_redirected_to homy_url(Homie.last)
+    assert_redirected_to homie_url(Homie.last)
   end
 
-  test "should show homy" do
-    get homy_url(@homy)
+  test "should show homie" do
+    get homie_url(@homie)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_homy_url(@homy)
+    get edit_homie_url(@homie)
     assert_response :success
   end
 
-  test "should update homy" do
-    patch homy_url(@homy), params: { homy: { name: @homy.name } }
-    assert_redirected_to homy_url(@homy)
+  test "should update homie" do
+    patch homie_url(@homie), params: { homie: { name: @homie.name } }
+    assert_redirected_to homie_url(@homie)
   end
 
-  test "should destroy homy" do
+  test "should destroy homie" do
     assert_difference("Homie.count", -1) do
-      delete homy_url(@homy)
+      delete homie_url(@homie)
     end
 
     assert_redirected_to homies_url

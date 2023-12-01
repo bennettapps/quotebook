@@ -1,1 +1,1 @@
-json.partial! "homies/homy", homy: @homy
+json.partial! "homies/homie", homie: @homie

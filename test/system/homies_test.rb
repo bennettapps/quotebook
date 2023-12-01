@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class HomiesTest < ApplicationSystemTestCase
   setup do
-    @homy = homies(:one)
+    @homie = homies(:one)
   end
 
   test "visiting the index" do
@@ -14,7 +14,7 @@ class HomiesTest < ApplicationSystemTestCase
     visit homies_url
     click_on "New homie"
 
-    fill_in "Name", with: @homy.name
+    fill_in "Name", with: @homie.name
     click_on "Create Homie"
 
     assert_text "Homie was successfully created"
@@ -22,10 +22,10 @@ class HomiesTest < ApplicationSystemTestCase
   end
 
   test "should update Homie" do
-    visit homy_url(@homy)
+    visit homie_url(@homie)
     click_on "Edit this homie", match: :first
 
-    fill_in "Name", with: @homy.name
+    fill_in "Name", with: @homie.name
     click_on "Update Homie"
 
     assert_text "Homie was successfully updated"
@@ -33,7 +33,7 @@ class HomiesTest < ApplicationSystemTestCase
   end
 
   test "should destroy Homie" do
-    visit homy_url(@homy)
+    visit homie_url(@homie)
     click_on "Destroy this homie", match: :first
 
     assert_text "Homie was successfully destroyed"
