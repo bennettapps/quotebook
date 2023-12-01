@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @homy %>
+
+<div>
+  <%= link_to "Edit this homie", edit_homy_path(@homy) %> |
+  <%= link_to "Back to homies", homies_path %>
+
+  <%= button_to "Destroy this homie", @homy, method: :delete %>
+</div>

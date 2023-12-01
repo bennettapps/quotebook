@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Homies</h1>
+
+<div id="homies">
+  <% @homies.each do |homy| %>
+    <%= render homy %>
+    <p>
+      <%= link_to "Show this homie", homy %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New homie", new_homy_path %>
