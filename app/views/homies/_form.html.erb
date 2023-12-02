@@ -1,4 +1,4 @@
-<%= form_with(model: homie) do |form| %>
+<%= simple_form_for(@homie) do |form| %>
   <% if homie.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(homie.errors.count, "error") %> prohibited this homie from being saved:</h2>

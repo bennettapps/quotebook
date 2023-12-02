@@ -1,0 +1,16 @@
+<h1 style="padding-top: 2rem; padding-bottom: 2rem;">Dashboard</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+    <tbody> 
+      <% @homies.each do |homie| %>
+        <tr>
+          <td><%= link_to homie.name, homie_path(homie) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </thead>
+</table>

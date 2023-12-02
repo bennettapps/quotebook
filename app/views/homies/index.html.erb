@@ -4,10 +4,12 @@
 
 <div id="homies">
   <% @homies.each do |homie| %>
-    <%= render homie %>
-    <p>
-      <%= link_to "Show this homie", homie %>
-    </p>
+    <div class="card">
+      <%= render homie %>
+      <p>
+        <%= link_to "Show this homie", homie %>
+      </p>
+    </div>
   <% end %>
 </div>
 
