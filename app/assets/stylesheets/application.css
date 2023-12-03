@@ -19,14 +19,14 @@
     margin: 2rem 0rem;
 }
 fieldset legend {
-float: none;
+    float: none;
 }
 #navbarNav {
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .status-icon {
-width: 10px;
-height: 10px;
-border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }

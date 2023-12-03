@@ -4,7 +4,8 @@
 
 <div>
   <%= link_to "Edit this homie", edit_homie_path(@homie) %> |
-  <%= link_to "Back to homies", homies_path %>
+  <%= link_to "Back to homies", homies_path %> |
+  <%= link_to "Quotes", homie_quotes_path(@homie) %>
 
   <%= button_to "Destroy this homie", @homie, method: :delete %>
 </div>
