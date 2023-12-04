@@ -3,7 +3,7 @@
 <%= render @quote %>
 
 <div>
-  <%= link_to "Edit this quote", edit_homie_quote_path(@quote) %> |
+  <%= link_to "Edit this quote", edit_homie_quote_path(@homie) %> |
   <%= link_to "Back to quotes", homie_quotes_path %>
 
   <%= button_to "Destroy this quote", [@homie, @quote], method: :delete %>

@@ -4,10 +4,12 @@
 
 <div id="quotes">
   <% @quotes.each do |quote| %>
-    <%= render quote %>
-    <p>
-      <%= link_to "Show this quote", [@homie, quote] %>
-    </p>
+    <div class="card">
+      <%= render quote %>
+      <p>
+        <%= link_to "Show this quote", [@homie, quote] %>
+      </p>
+    </div>
   <% end %>
 </div>
 
