@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Quote types</h1>
+
+<div id="quote_types">
+  <% @quote_types.each do |quote_type| %>
+    <div class="card">
+      <%= render quote_type %>
+      <p>
+        <%= link_to "Show this quote type", quote_type %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New quote type", new_quote_type_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :quote_types
   resources :dashboard
   resources :homies do
     resources :quotes

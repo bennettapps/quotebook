@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @quote_type %>
+
+<div>
+  <%= link_to "Edit this quote type", edit_quote_type_path(@quote_type) %> |
+  <%= link_to "Back to quote types", quote_types_path %>
+
+  <%= button_to "Destroy this quote type", @quote_type, method: :delete %>
+</div>

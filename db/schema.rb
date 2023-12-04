@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_03_045252) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_04_201246) do
   create_table "homies", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -18,13 +18,22 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_03_045252) do
     t.integer "homie_id"
   end
 
+  create_table "quote_types", force: :cascade do |t|
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "quotes", force: :cascade do |t|
     t.string "quote"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "homie_id"
+    t.integer "quote_type_id"
     t.index ["homie_id"], name: "index_quotes_on_homie_id"
+    t.index ["quote_type_id"], name: "index_quotes_on_quote_type_id"
   end
 
   add_foreign_key "quotes", "homies"
+  add_foreign_key "quotes", "quote_types"
 end
