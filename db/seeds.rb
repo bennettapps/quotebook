@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+["hollup", "let him cook", "caught in 4k", "random", "outta pocket"].each do |quote_type_name|
+  QuoteType.find_or_create_by!(description: quote_type_name)
+end
+
+["prof stroup", "jesse", "roy", "zach", "peter", "that one guy from syria"].each do |homie_name|
+  Homie.find_or_create_by!(name: homie_name)
+end
