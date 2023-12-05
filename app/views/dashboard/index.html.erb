@@ -4,11 +4,19 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Quotes</th>
+      <th>Mostly</th>
+      <th>Avg Insanity</th>
+      <th>Total Insanity</th>
     </tr>
     <tbody> 
       <% @homies.each do |homie| %>
         <tr>
           <td><%= link_to homie.name, homie_path(homie) %></td>
+          <td><%= homie.quotes.count %></td>
+          <td><%= homie.quotes.group(:quote_type).count.max_by { |_, count| count }&.first&.description || "-" %></td>
+          <td><%= homie.quotes.average(:insanity).to_i || 0 %></td>
+          <td><%= homie.quotes.sum(:insanity) %></td>
         </tr>
       <% end %>
     </tbody>
