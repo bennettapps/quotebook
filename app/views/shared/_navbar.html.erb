@@ -15,6 +15,12 @@
             </li>
             </ul>
         </div>
+
+        <form class="d-flex" role="search" action="/search">
+          <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search" value="<%= @query %>">
+          <input type="hidden" name="insanity" value=0>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
     </div>
 </nav> 
 
