@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_05_212055) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_08_033405) do
   create_table "homies", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -31,6 +31,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_212055) do
     t.integer "homie_id"
     t.integer "quote_type_id"
     t.integer "insanity"
+    t.boolean "start"
+    t.boolean "star"
     t.index ["homie_id"], name: "index_quotes_on_homie_id"
     t.index ["quote_type_id"], name: "index_quotes_on_quote_type_id"
   end

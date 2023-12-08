@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Favorite Quotes</h1>
+
+<div id="quotes">
+  <% @quotes.each do |quote| %>
+    <div class="card">
+      <%= render quote %>
+      <p>
+        <%= link_to "Show this quote", [quote.homie, quote] %>
+      </p>
+    </div>
+  <% end %>
+</div>
