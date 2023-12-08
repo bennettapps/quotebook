@@ -31,7 +31,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_08_033405) do
     t.integer "homie_id"
     t.integer "quote_type_id"
     t.integer "insanity"
-    t.boolean "start"
     t.boolean "star"
     t.index ["homie_id"], name: "index_quotes_on_homie_id"
     t.index ["quote_type_id"], name: "index_quotes_on_quote_type_id"

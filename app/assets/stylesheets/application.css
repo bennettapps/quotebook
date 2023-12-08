@@ -18,13 +18,16 @@
     padding: 1rem 2rem;
     margin: 2rem 0rem;
 }
+
 fieldset legend {
     float: none;
 }
+
 #navbarNav {
     display: flex;
     justify-content: space-between;
 }
+
 .status-icon {
     width: 10px;
     height: 10px;

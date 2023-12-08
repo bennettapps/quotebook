@@ -7,7 +7,7 @@
     <%= f.input :quote %>
     <%= f.association :quote_type, :label_method => :description %>
     <%= f.input :insanity, as: :integer %>
-    <%= f.input :star, as: :boolean %>
+    <%= f.input :star, as: :boolean, label: "Favorite" %>
   </div>
 
   <div class="form-actions">

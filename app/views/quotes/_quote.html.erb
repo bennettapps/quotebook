@@ -1,5 +1,11 @@
 <div id="<%= dom_id quote %>">
   <p>
+  <% if quote.star %>
+    <i class="fas fa-star" style="color:#FFD700; float: right; margin-right: -15px"></i>
+  <% end %>
+  </p>
+
+  <p>
     <strong>Quote:</strong>
     <%= quote.quote %>
   </p>
@@ -13,10 +19,4 @@
     <strong>Insanity:</strong>
     <%= quote.insanity %>
   </p>
-
-  <p>
-    <strong>Star:</strong>
-    <%= quote.star %>
-  </p>
-
 </div>
