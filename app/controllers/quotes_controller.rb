@@ -27,7 +27,7 @@ class QuotesController < ApplicationController
     respond_to do |format|
       if @quote.save
         format.html { redirect_to homie_quote_url(@homie, @quote), notice: "Quote was successfully created." }
-        format.json { render :show, status: :created, location: @quote }
+        format.json { render :show, status: :created, location: [@homie, @quote] }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @quote.errors, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class QuotesController < ApplicationController
     respond_to do |format|
       if @quote.update(quote_params)
         format.html { redirect_to homie_quote_url(@homie, @quote), notice: "Quote was successfully updated." }
-        format.json { render :show, status: :ok, location: @quote }
+        format.json { render :show, status: :ok, location: [@homie, @quote] }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @quote.errors, status: :unprocessable_entity }

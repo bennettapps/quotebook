@@ -1,8 +1,8 @@
 <div id="<%= dom_id quote %>">
-  <p>
-  <% if quote.star %>
-    <i class="fas fa-star" style="color:#FFD700; float: right; margin-right: -15px"></i>
-  <% end %>
+  <p class="star-container">
+    <% if quote.star? %>
+      <i class="fas fa-star" style="color:#FFD700; float: right; margin-right: -15px"></i>
+    <% end %>
   </p>
 
   <p>

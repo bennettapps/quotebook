@@ -10,6 +10,7 @@
       <%= render quote %>
       <p>
         <%= link_to "Show this quote", [@homie, quote] %>
+        <%= link_to (quote.star ? "Unstar": "Star"), homie_quote_path(@homie, quote), "data-star-quote" => quote.star?, "data-turbo" => false %>
       </p>
     </div>
   <% end %>
